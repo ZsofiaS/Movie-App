@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Lato");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5rem;
+  background-color: #262626;
+  color: ivory;
+  font-family: "Lato";
+  height: 100%;
+}
+h1 {
+  font-size: 4.5rem;
+  border-bottom: 1px solid ivory;
+  margin-bottom: 3rem;
+}
+h3 {
+  font-size: 2.2rem;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  float: left;
+}
+form div {
+  padding: 0 1rem;
+}
+input {
+  border: none;
+  color: ivory;
+  background-color: transparent;
+  font-size: 2rem;
+  font-family: "Lato";
+  height: 3rem;
+  width: 20rem;
+  max-width: 50%;
+  border-radius: 10px 0 0 10px;
+  margin: 1rem 0;
+}
+input::placeholder {
+  color: #999999;
+  font-style: italic;
+}
+input:focus {
+  outline: none;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+select {
+  margin: 6px 3px;
+  width: 12.5rem;
+  padding: 5px 35px 5px 5px;
+  font-size: 1.3rem;
+  height: 3.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://img.icons8.com/metro/26/000000/movie-projector.png) 90% / 15% no-repeat ivory;
+}
+button {
+  border: none;
+  background-color: transparent;
+  color: #999999;
+  padding: 1rem;
+  height: 3rem;
+  border-radius: 0 10px 10px 0;
+}
+button:hover {
+  cursor: pointer;
+}
+span {
+  margin: 5px;
+  padding: 4px;
+  font-size: 2rem;
+}
+/* APP */
+.App {
+  text-align: center;
+}
+/* HEADER */
+.Header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem 0.7rem 4rem;
+  text-align: left;
+  background-color: #262626;
+  line-height: 80%;
+}
+.Header p {
+  font-size: 1.2rem;
+}
+.Header-heading {
+  color: #cc0000;
+  text-align: left;
+  font-family: "Permanent Marker";
+  font-size: 3.5rem;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.Header-menu {
+  position: relative;
+  width: 2.5rem;
+  height: 2rem;
+  display: none;
+}
+.Header-menu:hover {
+  cursor: pointer;
+}
+.Header-menu-line {
+  position: relative;
+  width: 2.5rem;
+  height: 2px;
+  background-color: #cc0000;
+  float: right;
+}
+.Header-menu-line::before,
+.Header-menu-line::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  width: 2.5rem;
+  height: 2px;
+  background-color: #cc0000;
+  float: right;
+}
+.Header-menu-line::after {
+  top: .75rem;
+}
+/* MAIN */
+.Main,
+.Popular,
+.Trending,
+.Discover {
+  width: 75%;
+  height: 90%;
+  float: right;
+  text-align: left;
+  padding: 1rem;
+  display: block;
+}
+.Main-content {
+  display: flex;
+  flex-direction: column;
+}
+.Main-button {
+  transform: scale(2);
+  margin-bottom: 1rem;
+}
+/* SIDEBAR */
+.Sidebar,
+.Sidebar-active {
+  display: block;
+  position: relative;
+  max-width: 25%;
+  height: 80vh;
+  float: left;
+  text-align: left;
+}
+.Sidebar div,
+.Sidebar-active div {
+  width: 100%;
+  padding: 2rem 2rem 2rem 4rem;
+}
+.Sidebar div:hover,
+.Sidebar div:active,
+.Sidebar-active:hover,
+.Sidebar-active:active, {
+  width: 100%;
+  background-color: #262626;
+}
+.Link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  font-size: 2rem;
+}
+.Link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+/* MOVIE(INDIVIDUAL PAGE) */
+.Movie {
+  width: 70%;
+  height: 100%;
+  float: right;
+  text-align: left;
+  padding: 1rem;
+  display: flex;
+  background-color: #262626;
+}
+.Results {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Movie-image-container {
+  width: 30rem;
+  height: 100%;
+  position: relative;
+}
+.Movie-info-container {
+  line-height: 140%;
+  width: 45%;
+  padding-left: 5rem;
+}
+.Movie-rating {
+  color: ivory;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+/* TRENDING/POPULAR */
+.Trending-content,
+.Popular-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.LoadButton-container {
+  margin: 1rem auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.LoadButton {
+  color: #cc0000;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+/* MOVIECARD */
+.Moviecard {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  width: 30.8rem;
+  height: 23.4rem;
+  background-color: black;
+}
+.Moviecard:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.info-container {
+  text-align: right;
+  padding: 1rem;
+  width: 50%;
+  float: right;
+}
+.image-container {
+  width: 15.4rem;
+}
+.image-container img {
+  width: 15.4rem;
+  height: 100%;
+  position: relative;
+}
+.tags {
+  display: inline-block;
+  margin-top: 10px;
+}
+.Moviecard-rating {
+  font-size: 1.5rem;
+}
+.Moviecard-star {
+  transform: scale(2.2);
+    color: orangered;
+}
+/* DISCOVER */
+.Discover input {
+  width: 10rem;
+}
+/* FOOTER */
+.Footer {
+  float: right;
+  display: block;
+  width: 100%;
+  height: 10vh;
+  color: ivory;
+  margin-top: 2rem;
+}
+.Footer p,
+.Footer a {
+  color: ivory;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 950px) {
+  html {
+    font-size: 60%;
+  }
+  .Movie img {
+    width: 154px;
+  }
+  .Movie-image-container {
+    width: 16rem;
+    height: 100%;
+    position: relative;
+  }
+  .Movie-info-container {
+    width: 60%;
+  }
+  .Moviecard {
+    width: 36.4rem;
+    height: 26.35rem;
+  }
+  .image-container {
+    width: 18.2rem;
+  }
+  .image-container img {
+    width: 18.3rem;
+    height: 100%;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 58%;
+  }
+  form {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    padding: 1rem 0;
+  }
+  .Header-menu {
+    display: block;
+  }
+  .Sidebar {
+    max-width: 100%;
+    height: auto;
+    float: none;
+    text-align: center;
+    display: none;
+    margin: 0;
+  }
+  .Sidebar-active {
+    background-color: #cc0000;
+    color: #1a1a1a;
+    max-width: 100%;
+    height: auto;
+    float: none;
+    text-align: center;
+    margin: 0;
+    display: block;
+    text-align: left;
+  }
+  .Sidebar-active div {
+    width: 100%;
+    padding: 0;
+  }
+  .Sidebar-active div:hover {
+    background-color: #262626;
+    color: #cc0000;
+  }
+  .Link {
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #262626;
+  }
+  .Movie {
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .Movie-rating {
+    display: inline-block;
+    text-align: center;
+  }
+  .Movie-image-container {
+    width: 20rem;
+    height: 100%;
+    position: relative;
+    margin: 2rem auto;
+  }
+  .Movie img {
+    width: 20rem;
+  }
+  .Movie-info-container {
+    line-height: 140%;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .Moviecard {
+    width: 30.8rem;
+    height: 23.4rem;
+    margin: 1rem;
+  }
+  .image-container {
+    width: 15.4rem;
+  }
+  .image-container img {
+    width: 15.4rem;
+  }
+
+  .Main,
+  .Popular,
+  .Trending,
+  .Discover {
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+    float: none;
+    margin: 0 auto;
+  }
+  .Main-content div,
+  .Popular-content div,
+  .Trending-content div,
+  .Discover-content div {
+    margin: 0 auto;
+  }
+}
